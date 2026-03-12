@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://wbapw5jplhmk"]
+
+[ext_resource type="PackedScene" uid="uid://eehj5cq0175f" path="res://assets/ecenas/backgorund_parallax.tscn" id="1_3a8g2"]
+[ext_resource type="PackedScene" uid="uid://of0y8i3ytiyl" path="res://assets/ecenas/mapa.tscn" id="1_kiknd"]
+[ext_resource type="PackedScene" uid="uid://wlwc86hhktjd" path="res://assets/ecenas/player.tscn" id="2_3a8g2"]
+
+[node name="main" type="Node2D"]
+
+[node name="backgound_parallax" parent="." instance=ExtResource("1_3a8g2")]
+
+[node name="mapa" parent="." instance=ExtResource("1_kiknd")]
+position = Vector2(0, 73)
+
+[node name="player" parent="." instance=ExtResource("2_3a8g2")]
+position = Vector2(87, 559)
