@@ -1,3 +1,5 @@
 arreglar problema de la valocidad de salto en walk
 
 continuar con estados de las demas animaciones
+
+arreglar coliciones del terreno
