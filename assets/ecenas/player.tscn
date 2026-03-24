@@ -1,9 +1,9 @@
-[gd_scene load_steps=340 format=3 uid="uid://wlwc86hhktjd"]
+[gd_scene load_steps=346 format=3 uid="uid://wlwc86hhktjd"]
 
-[ext_resource type="Script" uid="uid://1221uhodcc2c" path="res://assets/ecenas/player.gd" id="1_f04g6"]
+[ext_resource type="Script" uid="uid://bxtuhji3sr4qp" path="res://assets/script/player.gd" id="1_chid0"]
 [ext_resource type="Texture2D" uid="uid://b7hqrxofuyag1" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Idle/Player Idle 48x48.png" id="1_h1ws2"]
 [ext_resource type="Texture2D" uid="uid://bfwy830ryetcc" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Air Spin/player air spin 48x48.png" id="2_vri1i"]
-[ext_resource type="Script" uid="uid://b65q6ewgjsmc2" path="res://assets/ecenas/camera_2d.gd" id="3_j3vlk"]
+[ext_resource type="Script" uid="uid://b65q6ewgjsmc2" path="res://assets/script/camera_2d.gd" id="3_j3vlk"]
 [ext_resource type="Texture2D" uid="uid://bsjxc0pm1aee5" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Climb (facing back of player)/player climb-back 48x48.png" id="3_rkhp5"]
 [ext_resource type="Texture2D" uid="uid://dm7ef0j88ogq3" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Climb (facing side of player)/old climb/Player Side-Climb 48x48.png" id="4_6egam"]
 [ext_resource type="Texture2D" uid="uid://ddx7awnx5xo1r" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Crouch-Idle/Player Crouch-Idle 48x48.png" id="5_vxfbp"]
@@ -40,6 +40,12 @@
 [ext_resource type="Texture2D" uid="uid://dipdu6umgcpav" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Wall Land/Player Wall Land (left) 48x48.png" id="37_kb58b"]
 [ext_resource type="Texture2D" uid="uid://dfovstcdo8khg" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Wall Slide/player wall slide (left) 48x48.png" id="38_6ovdv"]
 [ext_resource type="Texture2D" uid="uid://eadbcp7fxnhu" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Wall Slide/player wall slide 48x48.png" id="39_ru5ng"]
+[ext_resource type="Script" uid="uid://dkbmlyerocdyl" path="res://assets/script/maquina_estados.gd" id="41_chid0"]
+[ext_resource type="Script" uid="uid://cyki620tslixs" path="res://assets/script/ESTADO_IDLE.gd" id="42_chid0"]
+[ext_resource type="Script" uid="uid://cm17pof1r44vu" path="res://assets/script/ESTADO_WALK.gd" id="43_rjm31"]
+[ext_resource type="Script" uid="uid://bjg6fccwhr1y4" path="res://assets/script/ESTADO_JUMP.gd" id="44_d88jn"]
+[ext_resource type="Script" uid="uid://ct835afdbbd44" path="res://assets/script/ESTADO_FALL.gd" id="45_hmu51"]
+[ext_resource type="Script" uid="uid://dev6gglkeq25d" path="res://assets/script/ESTADO_RUN.gd" id="46_5uwsd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3vlk"]
 size = Vector2(7, 14)
@@ -256,6 +262,18 @@ region = Rect2(384, 0, 48, 48)
 atlas = ExtResource("8_w8oeo")
 region = Rect2(432, 0, 48, 48)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_we2mm"]
+atlas = ExtResource("11_dxf0q")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8yvd"]
+atlas = ExtResource("11_dxf0q")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryrel"]
+atlas = ExtResource("11_dxf0q")
+region = Rect2(240, 0, 48, 48)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pcxi6"]
 atlas = ExtResource("9_17i14")
 region = Rect2(0, 0, 48, 48)
@@ -323,18 +341,6 @@ region = Rect2(48, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_44diw"]
 atlas = ExtResource("11_dxf0q")
 region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_we2mm"]
-atlas = ExtResource("11_dxf0q")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8yvd"]
-atlas = ExtResource("11_dxf0q")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ryrel"]
-atlas = ExtResource("11_dxf0q")
-region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g22cu"]
 atlas = ExtResource("12_k7hif")
@@ -1253,7 +1259,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lsq4f")
 }],
-"loop": true,
+"loop": false,
 "name": &"air_spin",
 "speed": 10.0
 }, {
@@ -1324,7 +1330,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"crouch_idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1359,7 +1365,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"crouch_walk",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1389,7 +1395,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_va5dx")
 }],
-"loop": true,
+"loop": false,
 "name": &"dash",
 "speed": 10.0
 }, {
@@ -1427,6 +1433,20 @@ animations = [{
 "loop": true,
 "name": &"death",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we2mm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8yvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryrel")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1489,17 +1509,8 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_44diw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_we2mm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x8yvd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ryrel")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 8.0
 }, {
@@ -1861,7 +1872,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"punch_jab",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1980,7 +1991,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2321,8 +2332,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D"]
-script = ExtResource("1_f04g6")
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("maquina_estados")]
+script = ExtResource("1_chid0")
+maquina_estados = NodePath("maquina_estados")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 1)
@@ -2331,10 +2343,67 @@ shape = SubResource("RectangleShape2D_j3vlk")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ujoy2")
-animation = &"air_spin"
-frame = 2
-frame_progress = 0.486666
+animation = &"wall_slide"
+frame_progress = 0.414361
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 script = ExtResource("3_j3vlk")
+
+[node name="dash_timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="dash_coldown" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="maquina_estados" type="Node" parent="." node_paths=PackedStringArray("estado_actual", "player", "animacion")]
+script = ExtResource("41_chid0")
+estado_actual = NodePath("estado_idle")
+player = NodePath("..")
+animacion = NodePath("../AnimatedSprite2D")
+
+[node name="estado_idle" type="Node" parent="maquina_estados" node_paths=PackedStringArray("estado_walk", "estado_jump", "player", "animacion")]
+script = ExtResource("42_chid0")
+estado_walk = NodePath("../estado_walk")
+estado_jump = NodePath("../estado_jump")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+can_move = false
+
+[node name="estado_walk" type="Node" parent="maquina_estados" node_paths=PackedStringArray("idle_estado", "estado_jump", "estado_run", "player", "animacion")]
+script = ExtResource("43_rjm31")
+idle_estado = NodePath("../estado_idle")
+estado_jump = NodePath("../estado_jump")
+estado_run = NodePath("../estado_run")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_jump" type="Node" parent="maquina_estados" node_paths=PackedStringArray("estado_walk", "idle_estado", "estado_fall", "player", "animacion")]
+script = ExtResource("44_d88jn")
+estado_walk = NodePath("../estado_walk")
+idle_estado = NodePath("../estado_idle")
+estado_fall = NodePath("../estado_fall")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_fall" type="Node" parent="maquina_estados" node_paths=PackedStringArray("estado_idle", "estado_walk", "estado_run", "player", "animacion")]
+script = ExtResource("45_hmu51")
+estado_idle = NodePath("../estado_idle")
+estado_walk = NodePath("../estado_walk")
+estado_run = NodePath("../estado_run")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_run" type="Node" parent="maquina_estados" node_paths=PackedStringArray("estado_idle", "estado_walk", "estado_jump", "estado_fall", "player", "animacion")]
+script = ExtResource("46_5uwsd")
+estado_idle = NodePath("../estado_idle")
+estado_walk = NodePath("../estado_walk")
+estado_jump = NodePath("../estado_jump")
+estado_fall = NodePath("../estado_fall")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="maquina_estados" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="dash_coldown" to="." method="_on_dash_coldown_timeout"]
