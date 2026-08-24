@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dp16ftqn4t1le"]
+
+[ext_resource type="Texture2D" uid="uid://b40a42qjo3l54" path="res://assets/obj_pruebas/ESCALAR.png" id="1_wijpo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l46lu"]
+texture = ExtResource("1_wijpo")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_po1xm"]
+physics_layer_0/collision_layer = 8
+sources/0 = SubResource("TileSetAtlasSource_l46lu")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wijpo"]
+size = Vector2(4, 1.5)
+
+[node name="tile_escalar" type="TileMapLayer" unique_id=2098681776 groups=["wall_escalar"]]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_po1xm")
+
+[node name="impulso_y" type="Area2D" parent="." unique_id=1051855841]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="impulso_y" unique_id=673537611]
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_wijpo")

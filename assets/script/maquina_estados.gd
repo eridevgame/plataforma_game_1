@@ -14,15 +14,32 @@ func _ready():
 			array_estados.append(child)
 			
 func _physics_process(delta):
+	var dir = Input.get_axis("izquierda","derecha")
+	if player.puede_girar:
+		if dir > 0:
+			player.raycast.target_position = player.ray_position_1
+		elif dir < 0:
+			player.raycast.target_position = player.ray_position_2
+	
 	if not player.is_on_floor():
 		player.velocity += player.get_gravity() * delta
 	
 	if estado_actual.next_estado != null:
-		cambiar_estado(estado_actual.next_estado)
+		var siguiente = estado_actual.next_estado
+		estado_actual.next_estado = null
+		cambiar_estado(siguiente)
 	estado_actual.estado_process(delta)	
 	player.move_and_slide()
 	
+	if estado_actual.next_estado != null:
+		print("CAMBIANDO A:", estado_actual.next_estado.name)
+	
+	
+	
 func cambiar_estado(new_estado: ESTADOS):
+	if new_estado == null:
+		return
+		
 	estado_actual.on_exit()
 	estado_actual.next_estado = null
 	estado_actual = new_estado

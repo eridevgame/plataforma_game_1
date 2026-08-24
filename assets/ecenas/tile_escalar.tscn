@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dechj5cmhaipx"]
+
+[ext_resource type="Texture2D" uid="uid://b40a42qjo3l54" path="res://assets/obj_pruebas/ESCALAR.png" id="1_pnk1m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2j8i"]
+size = Vector2(16, 16)
+
+[node name="Node2D" type="Node2D" unique_id=1924116295]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1948597843]
+texture = ExtResource("1_pnk1m")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1045667045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=297065207]
+shape = SubResource("RectangleShape2D_t2j8i")

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://ds4ghc8dga0lv"]
+
+[ext_resource type="Script" uid="uid://fcwxl04tqf0f" path="res://assets/script/enemigo.gd" id="1_iddod"]
+[ext_resource type="Texture2D" uid="uid://b2v03booet0c" path="res://assets/obj_pruebas/Sprite-0001.png" id="2_dj33g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tosna"]
+atlas = ExtResource("2_dj33g")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36l8p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tosna")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iddod"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dj33g"]
+radius = 6.0
+
+[node name="enemigo" type="CharacterBody2D" unique_id=979723684]
+collision_layer = 32
+collision_mask = 3
+script = ExtResource("1_iddod")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=44909424]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_36l8p")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=93172217]
+position = Vector2(0, -5)
+target_position = Vector2(-7, 0)
+collision_mask = 63
+collide_with_areas = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=553323410]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_iddod")
+
+[node name="timer_dir" type="Timer" parent="." unique_id=1163866857]
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=291584948]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2105488057]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_dj33g")
+debug_color = Color(0.9124595, 0.27045435, 0.30787832, 0.41960785)
+
+[connection signal="timeout" from="timer_dir" to="." method="_on_timer_dir_timeout"]

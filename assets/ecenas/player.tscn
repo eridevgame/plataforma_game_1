@@ -1,4 +1,4 @@
-[gd_scene load_steps=346 format=3 uid="uid://wlwc86hhktjd"]
+[gd_scene format=3 uid="uid://wlwc86hhktjd"]
 
 [ext_resource type="Script" uid="uid://bxtuhji3sr4qp" path="res://assets/script/player.gd" id="1_chid0"]
 [ext_resource type="Texture2D" uid="uid://b7hqrxofuyag1" path="res://assets/personaje/2D-Pixel-Art-Character-Template/Idle/Player Idle 48x48.png" id="1_h1ws2"]
@@ -46,33 +46,25 @@
 [ext_resource type="Script" uid="uid://bjg6fccwhr1y4" path="res://assets/script/ESTADO_JUMP.gd" id="44_d88jn"]
 [ext_resource type="Script" uid="uid://ct835afdbbd44" path="res://assets/script/ESTADO_FALL.gd" id="45_hmu51"]
 [ext_resource type="Script" uid="uid://dev6gglkeq25d" path="res://assets/script/ESTADO_RUN.gd" id="46_5uwsd"]
+[ext_resource type="Script" uid="uid://cvtq83p2gdj5u" path="res://assets/script/ESTADO_DOBLE_JUMP.gd" id="47_ulpfj"]
+[ext_resource type="Script" uid="uid://blba2m7oskdpv" path="res://assets/script/ESTADO_CROUCH_IDLE.gd" id="48_afxyd"]
+[ext_resource type="Script" uid="uid://5u0yyftbfdyf" path="res://assets/script/ESTADO_CROUCH_WALK.gd" id="49_fn04i"]
+[ext_resource type="Script" uid="uid://cfh66spjwnydj" path="res://assets/script/ESTADO_DASH.gd" id="50_ik1p2"]
+[ext_resource type="Script" uid="uid://hmxhbbsj16ap" path="res://assets/script/ESTADO_ESCALAR.gd" id="51_6i26k"]
+[ext_resource type="Script" uid="uid://iosmay0w1k76" path="res://assets/script/ESTADO_SALIR_DE_ESCALERA.gd" id="52_p5vbu"]
+[ext_resource type="Script" uid="uid://8ipeiatagaod" path="res://assets/script/ESTADO_MOVER_OBJ.gd" id="53_xfdqq"]
+[ext_resource type="Script" uid="uid://dgg618l4weet6" path="res://assets/script/ESTADO_ROLL.gd" id="54_avsjc"]
+[ext_resource type="Script" uid="uid://hqobxqaqxnb5" path="res://assets/script/ESTADO_HURT.gd" id="55_gv3pd"]
+[ext_resource type="Script" uid="uid://bsqiekunnrdre" path="res://assets/script/ESTADO_PUNCH.gd" id="56_te81s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ik1p2"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn04i"]
+size = Vector2(8, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3vlk"]
 size = Vector2(7, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rmacf"]
-atlas = ExtResource("2_vri1i")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fwt3f"]
-atlas = ExtResource("2_vri1i")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bfbgd"]
-atlas = ExtResource("2_vri1i")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nxd5n"]
-atlas = ExtResource("2_vri1i")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bc820"]
-atlas = ExtResource("2_vri1i")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsq4f"]
-atlas = ExtResource("2_vri1i")
-region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4m0kk"]
 atlas = ExtResource("3_rkhp5")
@@ -261,6 +253,30 @@ region = Rect2(384, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_k8y0v"]
 atlas = ExtResource("8_w8oeo")
 region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwt3f"]
+atlas = ExtResource("2_vri1i")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfbgd"]
+atlas = ExtResource("2_vri1i")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmacf"]
+atlas = ExtResource("2_vri1i")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxd5n"]
+atlas = ExtResource("2_vri1i")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc820"]
+atlas = ExtResource("2_vri1i")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsq4f"]
+atlas = ExtResource("2_vri1i")
+region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_we2mm"]
 atlas = ExtResource("11_dxf0q")
@@ -1242,29 +1258,6 @@ region = Rect2(96, 0, 48, 48)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rmacf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fwt3f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bfbgd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nxd5n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bc820")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lsq4f")
-}],
-"loop": false,
-"name": &"air_spin",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_4m0kk")
 }, {
 "duration": 1.0,
@@ -1436,6 +1429,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_fwt3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfbgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmacf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxd5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc820")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsq4f")
+}],
+"loop": false,
+"name": &"doble_jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_we2mm")
 }, {
 "duration": 1.0,
@@ -1461,9 +1477,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h40ce")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt_damange",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1577,7 +1593,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_52r60")
 }],
-"loop": true,
+"loop": false,
 "name": &"katana_attack_sheathe",
 "speed": 10.0
 }, {
@@ -1670,7 +1686,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7lxcb")
 }],
-"loop": true,
+"loop": false,
 "name": &"katana_run_attack",
 "speed": 10.0
 }, {
@@ -1782,7 +1798,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"pull",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1907,7 +1923,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"push",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1960,7 +1976,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cphlw")
 }],
-"loop": true,
+"loop": false,
 "name": &"roll",
 "speed": 5.0
 }, {
@@ -2332,78 +2348,307 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("maquina_estados")]
+[sub_resource type="Animation" id="Animation_gv3pd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hit_area/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_te81s"]
+resource_name = "punh"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333333, 0.26666665, 0.4, 0.5333333, 0.6666665, 0.8000002, 0.9333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hit_area/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.55, 0.82),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fcjr0"]
+_data = {
+&"RESET": SubResource("Animation_gv3pd"),
+&"punh": SubResource("Animation_te81s")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gv3pd"]
+radius = 2.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gv3pd"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsjc"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i26k"]
+size = Vector2(14.5, 2)
+
+[node name="player" type="CharacterBody2D" unique_id=463595714 node_paths=PackedStringArray("maquina_estados", "estado_idle", "estado_fall", "estado_walk", "estado_run")]
+collision_mask = 30
 script = ExtResource("1_chid0")
 maquina_estados = NodePath("maquina_estados")
+estado_idle = NodePath("maquina_estados/estado_idle")
+estado_fall = NodePath("maquina_estados/estado_fall")
+estado_walk = NodePath("maquina_estados/estado_walk")
+estado_run = NodePath("maquina_estados/estado_run")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=2041765369]
+target_position = Vector2(7, 0)
+collision_mask = 24
+
+[node name="colicion_doble_jump" type="CollisionShape2D" parent="." unique_id=946599640]
+visible = false
+shape = SubResource("CircleShape2D_ik1p2")
+debug_color = Color(0.8268632, 0.39252454, 0.1604785, 0.41960785)
+
+[node name="colicion_crouch" type="CollisionShape2D" parent="." unique_id=1924177887]
+visible = false
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_fn04i")
+disabled = true
+debug_color = Color(0.435128, 0.589644, 0.325306, 0.42)
+
+[node name="colicion_normal" type="CollisionShape2D" parent="." unique_id=1725569154]
+visible = false
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_j3vlk")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1939397814]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ujoy2")
-animation = &"wall_slide"
-frame_progress = 0.414361
+animation = &"punch"
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=850689135]
 zoom = Vector2(2, 2)
 script = ExtResource("3_j3vlk")
 
-[node name="dash_timer" type="Timer" parent="."]
-wait_time = 0.1
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1305142204]
+libraries/ = SubResource("AnimationLibrary_fcjr0")
 
-[node name="dash_coldown" type="Timer" parent="."]
+[node name="hit_area" type="Area2D" parent="." unique_id=1806481936]
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_area" unique_id=1138280897]
+position = Vector2(15, 0)
+shape = SubResource("CircleShape2D_gv3pd")
+disabled = true
+
+[node name="sensor" type="Area2D" parent="." unique_id=1612754867]
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sensor" unique_id=853668062]
+shape = SubResource("CapsuleShape2D_gv3pd")
+debug_color = Color(0.071828015, 0.64300007, 0.27691388, 0.41960785)
+
+[node name="hurt_area" type="Area2D" parent="." unique_id=684342046]
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_area" unique_id=1328413705]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_avsjc")
+debug_color = Color(0.89163315, 0.31181338, 0.23849148, 0.41960785)
+
+[node name="area_impulso_y" type="Area2D" parent="." unique_id=726557233]
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_impulso_y" unique_id=1378610741]
+position = Vector2(6, -5)
+shape = SubResource("RectangleShape2D_6i26k")
+
+[node name="dash_timer" type="Timer" parent="." unique_id=2051605417]
+wait_time = 0.1
+one_shot = true
+
+[node name="dash_cooldown" type="Timer" parent="." unique_id=50466676]
 wait_time = 3.0
 one_shot = true
 
-[node name="maquina_estados" type="Node" parent="." node_paths=PackedStringArray("estado_actual", "player", "animacion")]
+[node name="roll_timer" type="Timer" parent="." unique_id=1469556280]
+
+[node name="roll_cooldown" type="Timer" parent="." unique_id=1354258749]
+wait_time = 3.0
+one_shot = true
+
+[node name="maquina_estados" type="Node" parent="." unique_id=2097966523 node_paths=PackedStringArray("estado_actual", "player", "animacion")]
 script = ExtResource("41_chid0")
 estado_actual = NodePath("estado_idle")
 player = NodePath("..")
 animacion = NodePath("../AnimatedSprite2D")
 
-[node name="estado_idle" type="Node" parent="maquina_estados" node_paths=PackedStringArray("estado_walk", "estado_jump", "player", "animacion")]
+[node name="estado_idle" type="Node" parent="maquina_estados" unique_id=685633692 node_paths=PackedStringArray("estado_walk", "estado_jump", "estado_crouch_idle", "estado_dash", "estado_escalando", "estado_mover_obj", "estado_hurt", "player", "animacion")]
 script = ExtResource("42_chid0")
 estado_walk = NodePath("../estado_walk")
 estado_jump = NodePath("../estado_jump")
+estado_crouch_idle = NodePath("../estado_crouch_idle")
+estado_dash = NodePath("../estado_dash")
+estado_escalando = NodePath("../estado_escalar")
+estado_mover_obj = NodePath("../estado_mover_obj")
+estado_hurt = NodePath("../estado_hurt")
 player = NodePath("../..")
 animacion = NodePath("../../AnimatedSprite2D")
 can_move = false
 
-[node name="estado_walk" type="Node" parent="maquina_estados" node_paths=PackedStringArray("idle_estado", "estado_jump", "estado_run", "player", "animacion")]
+[node name="estado_walk" type="Node" parent="maquina_estados" unique_id=1764077388 node_paths=PackedStringArray("idle_estado", "estado_jump", "estado_run", "estado_crouch_idle", "estado_crouch_walk", "estado_dash", "estado_escalando", "estado_fall", "estado_hurt", "player", "animacion")]
 script = ExtResource("43_rjm31")
 idle_estado = NodePath("../estado_idle")
 estado_jump = NodePath("../estado_jump")
 estado_run = NodePath("../estado_run")
+estado_crouch_idle = NodePath("../estado_crouch_idle")
+estado_crouch_walk = NodePath("../estado_crouch_walk")
+estado_dash = NodePath("../estado_dash")
+estado_escalando = NodePath("../estado_escalar")
+estado_fall = NodePath("../estado_fall")
+estado_hurt = NodePath("../estado_hurt")
 player = NodePath("../..")
 animacion = NodePath("../../AnimatedSprite2D")
 
-[node name="estado_jump" type="Node" parent="maquina_estados" node_paths=PackedStringArray("estado_walk", "idle_estado", "estado_fall", "player", "animacion")]
+[node name="estado_jump" type="Node" parent="maquina_estados" unique_id=41488879 node_paths=PackedStringArray("estado_walk", "idle_estado", "estado_fall", "estado_doble_jump", "estado_dash", "estado_escalando", "player", "animacion")]
 script = ExtResource("44_d88jn")
 estado_walk = NodePath("../estado_walk")
 idle_estado = NodePath("../estado_idle")
 estado_fall = NodePath("../estado_fall")
+estado_doble_jump = NodePath("../estado_doble_jump")
+estado_dash = NodePath("../estado_dash")
+estado_escalando = NodePath("../estado_escalar")
 player = NodePath("../..")
 animacion = NodePath("../../AnimatedSprite2D")
 
-[node name="estado_fall" type="Node" parent="maquina_estados" node_paths=PackedStringArray("estado_idle", "estado_walk", "estado_run", "player", "animacion")]
+[node name="estado_fall" type="Node" parent="maquina_estados" unique_id=774365069 node_paths=PackedStringArray("estado_idle", "estado_walk", "estado_run", "estado_doble_jump", "estado_dash", "player", "animacion")]
 script = ExtResource("45_hmu51")
 estado_idle = NodePath("../estado_idle")
 estado_walk = NodePath("../estado_walk")
 estado_run = NodePath("../estado_run")
+estado_doble_jump = NodePath("../estado_doble_jump")
+estado_dash = NodePath("../estado_dash")
 player = NodePath("../..")
 animacion = NodePath("../../AnimatedSprite2D")
 
-[node name="estado_run" type="Node" parent="maquina_estados" node_paths=PackedStringArray("estado_idle", "estado_walk", "estado_jump", "estado_fall", "player", "animacion")]
+[node name="estado_run" type="Node" parent="maquina_estados" unique_id=1264831974 node_paths=PackedStringArray("estado_idle", "estado_walk", "estado_jump", "estado_fall", "estado_crouch_idle", "estado_dash", "estado_escalando", "estado_roll", "estado_hurt", "player", "animacion")]
 script = ExtResource("46_5uwsd")
 estado_idle = NodePath("../estado_idle")
 estado_walk = NodePath("../estado_walk")
 estado_jump = NodePath("../estado_jump")
 estado_fall = NodePath("../estado_fall")
+estado_crouch_idle = NodePath("../estado_crouch_idle")
+estado_dash = NodePath("../estado_dash")
+estado_escalando = NodePath("../estado_escalar")
+estado_roll = NodePath("../estado_roll")
+estado_hurt = NodePath("../estado_hurt")
 player = NodePath("../..")
 animacion = NodePath("../../AnimatedSprite2D")
 
+[node name="estado_doble_jump" type="Node" parent="maquina_estados" unique_id=456964826 node_paths=PackedStringArray("estado_fall", "estado_dash", "estado_escalando", "player", "animacion")]
+script = ExtResource("47_ulpfj")
+estado_fall = NodePath("../estado_fall")
+estado_dash = NodePath("../estado_dash")
+estado_escalando = NodePath("../estado_escalar")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_crouch_idle" type="Node" parent="maquina_estados" unique_id=36658512 node_paths=PackedStringArray("estado_idle", "estado_walk", "estado_crouch_walk", "player", "animacion")]
+script = ExtResource("48_afxyd")
+estado_idle = NodePath("../estado_idle")
+estado_walk = NodePath("../estado_walk")
+estado_crouch_walk = NodePath("../estado_crouch_walk")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_crouch_walk" type="Node" parent="maquina_estados" unique_id=153070355 node_paths=PackedStringArray("estado_crouch_idle", "estado_walk", "player", "animacion")]
+script = ExtResource("49_fn04i")
+estado_crouch_idle = NodePath("../estado_crouch_idle")
+estado_walk = NodePath("../estado_walk")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_dash" type="Node" parent="maquina_estados" unique_id=1989248702 node_paths=PackedStringArray("estado_idle", "estado_fall", "player", "animacion")]
+script = ExtResource("50_ik1p2")
+estado_idle = NodePath("../estado_idle")
+estado_fall = NodePath("../estado_fall")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_escalar" type="Node" parent="maquina_estados" unique_id=284537084 node_paths=PackedStringArray("estado_idle", "estado_salir_de_escalera", "estado_jump", "player", "animacion")]
+script = ExtResource("51_6i26k")
+estado_idle = NodePath("../estado_idle")
+estado_salir_de_escalera = NodePath("../estado_salir_de_escalera")
+estado_jump = NodePath("../estado_jump")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_salir_de_escalera" type="Node" parent="maquina_estados" unique_id=1516178157 node_paths=PackedStringArray("estado_idle")]
+script = ExtResource("52_p5vbu")
+estado_idle = NodePath("../estado_idle")
+
+[node name="estado_mover_obj" type="Node" parent="maquina_estados" unique_id=962648392 node_paths=PackedStringArray("estado_idle", "player", "animacion")]
+script = ExtResource("53_xfdqq")
+estado_idle = NodePath("../estado_idle")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_roll" type="Node" parent="maquina_estados" unique_id=1307593702 node_paths=PackedStringArray("maquina", "estado_idle", "estado_walk", "estado_run", "player", "animacion")]
+script = ExtResource("54_avsjc")
+maquina = NodePath("..")
+estado_idle = NodePath("../estado_idle")
+estado_walk = NodePath("../estado_walk")
+estado_run = NodePath("../estado_run")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_hurt" type="Node" parent="maquina_estados" unique_id=1032425466 node_paths=PackedStringArray("estado_idle", "estado_walk", "estado_run", "player", "animacion")]
+script = ExtResource("55_gv3pd")
+estado_idle = NodePath("../estado_idle")
+estado_walk = NodePath("../estado_walk")
+estado_run = NodePath("../estado_run")
+player = NodePath("../..")
+animacion = NodePath("../../AnimatedSprite2D")
+
+[node name="estado_punch" type="Node" parent="maquina_estados" unique_id=707369851]
+script = ExtResource("56_te81s")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="maquina_estados" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="hurt_area" to="." method="_on_hurt_area_body_entered"]
+[connection signal="area_entered" from="area_impulso_y" to="maquina_estados/estado_escalar" method="_on_area_impulso_y_area_entered"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
-[connection signal="timeout" from="dash_coldown" to="." method="_on_dash_coldown_timeout"]
+[connection signal="timeout" from="dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="roll_timer" to="maquina_estados/estado_roll" method="_on_roll_timer_timeout"]
+[connection signal="timeout" from="roll_cooldown" to="maquina_estados/estado_roll" method="_on_roll_cooldown_timeout"]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://of0y8i3ytiyl" path="res://assets/ecenas/mapa.tscn" id="1_kiknd"]
 [ext_resource type="PackedScene" uid="uid://wlwc86hhktjd" path="res://assets/ecenas/player.tscn" id="2_3a8g2"]
 [ext_resource type="PackedScene" uid="uid://gwej1p7ipl8g" path="res://assets/ecenas/caja_prueba.tscn" id="4_6vx7g"]
-[ext_resource type="PackedScene" uid="uid://ds4ghc8dga0lv" path="res://assets/ecenas/enemigo.tscn" id="5_prxuv"]
+[ext_resource type="PackedScene" uid="uid://pc5ytaccip3u" path="res://assets/enemigos/enemigo.tscn" id="5_prxuv"]
 
 [node name="main" type="Node2D" unique_id=364131574]
 
@@ -20,5 +20,5 @@ position = Vector2(228, 606)
 position = Vector2(338, 625)
 disable_mode = 0
 
-[node name="enemigo" parent="." unique_id=202254986 instance=ExtResource("5_prxuv")]
-position = Vector2(410, 529)
+[node name="enemigo" parent="." unique_id=709787671 instance=ExtResource("5_prxuv")]
+position = Vector2(444, 622)

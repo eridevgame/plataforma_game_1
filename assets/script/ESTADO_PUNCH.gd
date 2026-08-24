@@ -1,0 +1,2 @@
+extends ESTADOS
+class_name ESTADO_PUNCH

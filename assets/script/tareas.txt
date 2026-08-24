@@ -1,4 +1,11 @@
-arreglar problema de la valocidad de salto en walk
+area de hit en player y enemigo
+
+
+animaciones siguientes[
+	wall_side - hacer para que salte de pared a pared con gancho
+]
+
+crear terreno y enemigos para brobar mas animaciones y mecanicas
 
 continuar con estados de las demas animaciones
 
