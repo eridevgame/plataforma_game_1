@@ -1,13 +1,13 @@
 extends CharacterBody2D
 class_name OBJ_MOVIBLE
 
-@export var textura: Sprite2D
-@export var nombre: String
-@export var speed_empuje = 80.0
-@export var peso = 5.0
+@export var datos: objeto_movible_data
 
 func mover(dir: float):
-	velocity.x = dir * speed_empuje / peso
+	if not datos.se_empuja:
+		return 
+		
+	velocity.x = dir * datos.speed_empuje / datos.peso
 	move_and_slide()
 	print("caja: ", velocity.x)
 	

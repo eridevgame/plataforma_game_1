@@ -4,9 +4,11 @@ class_name ESTADOS
 
 @export var player: CharacterBody2D
 @export var animacion: AnimatedSprite2D
+@export var animacion_player: Animation
 
-
-const  SPEED = 200.0
+var  SPEED: float:
+	get:
+		return GlobalStats.stats["velocidad_movimiento"]
 const  JUMP_VELOCITY = -400.0
 var in_duble_jump = false
 

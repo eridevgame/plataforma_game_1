@@ -10,12 +10,16 @@ class_name ESTADO_RUN
 @export var estado_escalando: ESTADOS
 @export var estado_roll: ESTADOS
 @export var estado_hurt: ESTADOS
-
-var speed_run = 100
+var speed: float:
+	get:
+		return GlobalStats.stats["velocidad_movimiento"]
+var speed_run = speed * 1.5
 
 func on_enter():
 	player.play_anim("run",1.0)
 	print("entra: ",self.name)
+	
+
 	
 func estado_process(delta):
 	# CONDICIONES
@@ -62,7 +66,7 @@ func estado_process(delta):
 	if !player.is_on_floor():
 		next_estado = estado_fall
 		
-	if Input.is_action_just_pressed("accion") and player.can_roll:
+	if Input.is_action_just_pressed("roll") and player.can_roll:
 		next_estado = estado_roll
 		
 	if player.is_hurt:

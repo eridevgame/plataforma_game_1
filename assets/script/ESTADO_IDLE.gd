@@ -8,6 +8,7 @@ class_name  ESTADO_IDLE
 @export var estado_escalando: ESTADOS
 @export var estado_mover_obj: ESTADOS
 @export var estado_hurt: ESTADOS
+@export var estado_punch: ESTADOS
 
 var salto = 1
 
@@ -59,7 +60,10 @@ func estado_process(delta):
 	if Input.is_action_just_pressed("dash") and player.can_dash:
 		next_estado = estado_dash
 		
-	if player.raycast.is_colliding() and Input.is_action_pressed("accion"):
+	if player.raycast.is_colliding() and Input.is_action_pressed("mover"):
 		next_estado = estado_mover_obj
 		
-	
+	if Input.is_action_pressed("accion"):
+		player.ANIMACION.stop()
+		next_estado = estado_punch
+		player.is_punsh = true

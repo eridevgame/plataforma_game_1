@@ -52,9 +52,9 @@ func estado_process(delta):
 		
 	if player.is_on_floor() and dir_y > 0:
 		next_estado = estado_idle
+		player.is_escalando = false
 		
-	if player.is_escalando and Input.is_action_just_pressed("arriba"):
-		next_estado = estado_jump
+	
 
 
 func _on_area_impulso_y_area_entered(area: Area2D) -> void:

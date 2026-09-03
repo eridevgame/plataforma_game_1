@@ -40,11 +40,11 @@ func estado_process(delta):
 		animacion.flip_h = false
 		
 	# CAMBIOIS DE ESTADOS
-	if Input.is_action_just_pressed("arriba") and player.count_jump == 1:
-		player.count_jump += 1
-		next_estado = estado_doble_jump
-		print(player.count_jump)
-		return
+	if  player.can_doble_jump and Input.is_action_just_pressed("arriba") and player.count_jump == 1:
+			player.count_jump += 1
+			next_estado = estado_doble_jump
+			print(player.count_jump)
+			return
 		
 	if player.raycast.is_colliding() and Input.is_action_just_pressed("arriba"):
 		var tile = player.raycast.get_collider()

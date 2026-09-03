@@ -54,3 +54,4 @@ shape = SubResource("CircleShape2D_dj33g")
 debug_color = Color(0.9124595, 0.27045435, 0.30787832, 0.41960785)
 
 [connection signal="timeout" from="timer_dir" to="." method="_on_timer_dir_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -35,7 +35,7 @@ func estado_process(delta):
 		is_run = false
 	
 	# CAMBIO DE ESTADOS
-	if player.velocity.y > 0 and Input.is_action_just_pressed("arriba"):
+	if player.can_doble_jump and player.velocity.y > 0 and Input.is_action_just_pressed("arriba"):
 		player.count_jump += 1
 		next_estado = estado_doble_jump
 	
@@ -48,6 +48,8 @@ func estado_process(delta):
 	if dir != 0 and player.is_on_floor() and Input.is_action_pressed("correr"):
 		next_estado = estado_run
 		
+
+	
 	if player.is_on_floor() and dir == 0:
 		next_estado = estado_idle
 		

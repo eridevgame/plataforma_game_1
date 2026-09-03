@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dd5oaat4uphxy"]
+
+[ext_resource type="Script" uid="uid://cyv20d81np644" path="res://assets/script/obj_movible.gd" id="1_b4usp"]
+[ext_resource type="Script" uid="uid://wd0nl57jqntk" path="res://assets/script/recursos/obj-movil_data.gd" id="1_vntm8"]
+[ext_resource type="Texture2D" uid="uid://b2v03booet0c" path="res://assets/obj_pruebas/Sprite-0001.png" id="2_b4usp"]
+
+[sub_resource type="Resource" id="Resource_s74mj"]
+script = ExtResource("1_vntm8")
+metadata/_custom_type_script = "uid://wd0nl57jqntk"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s74mj"]
+size = Vector2(20, 16)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=756622435]
+collision_layer = 16
+script = ExtResource("1_b4usp")
+datos = SubResource("Resource_s74mj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=896144896]
+texture = ExtResource("2_b4usp")
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1553166321]
+position = Vector2(-3.5762787e-07, 0)
+shape = SubResource("RectangleShape2D_s74mj")

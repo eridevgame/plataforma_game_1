@@ -18,7 +18,7 @@ func on_enter():
 	player.velocity.y = -150
 	player.velocity.x = 100 * player.facing_direccion
 	player.top_escalada = false
-
+	player.is_escalando = false
 func estado_process(delta):
 	# CONDICIONES
 	timer += delta

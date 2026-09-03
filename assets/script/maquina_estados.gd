@@ -4,8 +4,10 @@ class_name MAQUINA_ESTADOS
 @export var estado_actual : ESTADOS
 
 var array_estados: Array[ESTADOS]
+@onready var area_hit = $"../hit_area"
 
 func _ready():
+	area_hit.add_to_group("hit")
 	animacion.play("idle")
 	for child in self.get_children():
 		if child is ESTADOS:
@@ -21,20 +23,20 @@ func _physics_process(delta):
 		elif dir < 0:
 			player.raycast.target_position = player.ray_position_2
 	
-	if not player.is_on_floor():
-		player.velocity += player.get_gravity() * delta
+	if not player.is_escalando:
+		if not player.is_on_floor():
+			player.velocity += player.get_gravity() * delta
+	
+		
 	
 	if estado_actual.next_estado != null:
 		var siguiente = estado_actual.next_estado
 		estado_actual.next_estado = null
 		cambiar_estado(siguiente)
-	estado_actual.estado_process(delta)	
 	player.move_and_slide()
+	estado_actual.estado_process(delta)	
 	
-	if estado_actual.next_estado != null:
-		print("CAMBIANDO A:", estado_actual.next_estado.name)
-	
-	
+	player.config_ataque("punch")
 	
 func cambiar_estado(new_estado: ESTADOS):
 	if new_estado == null:

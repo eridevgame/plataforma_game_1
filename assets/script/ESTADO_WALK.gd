@@ -1,7 +1,9 @@
 extends ESTADOS
 class_name ESTADO_WALK
 
-var walk_speed = 50.0
+var walk_speed: float:
+	get:
+		return GlobalStats.stats["velocidad_movimiento"]
 @export var idle_estado: ESTADOS
 @export var estado_jump: ESTADOS
 @export var estado_run: ESTADOS

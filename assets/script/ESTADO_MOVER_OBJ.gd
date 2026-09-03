@@ -8,7 +8,7 @@ var caja_actual: OBJ_MOVIBLE = null
 var is_jalando = false
 
 func on_enter():
-	animacion.play("pull")
+	animacion.play("pull",2.0)
 	player.esta_jalando = true
 	is_jalando = true
 	
@@ -16,6 +16,7 @@ func on_enter():
 		var collider = player.raycast.get_collider()
 		if collider is OBJ_MOVIBLE:
 			caja_actual = collider
+		print(player.raycast.get_collider())
 	
 func estado_process(delta):
 	# CONDICIONES
@@ -25,7 +26,7 @@ func estado_process(delta):
 		caja_actual.mover(dir)
 		player.velocity.x = caja_actual.velocity.x
 	
-	var speed_anim = 1.0 / caja_actual.peso
+	var speed_anim = 2.0 / caja_actual.datos.peso
 	var caja_derecha = caja_actual.global_position.x > player.global_position.x
 	if dir == 0:
 		animacion.pause()
@@ -41,7 +42,7 @@ func estado_process(delta):
 			player.play_anim("pull",speed_anim)
 	
 	# CAMBIOS DE ESTADOS
-	if !Input.is_action_pressed("accion"):
+	if !Input.is_action_pressed("mover"):
 		next_estado = estado_idle
 
 func on_exit():
