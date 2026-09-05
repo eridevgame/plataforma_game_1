@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://lifjon86ih3o"]
 
-[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_vi00g"]
+[ext_resource type="Texture2D" uid="uid://dnfnbv0tcdabe" path="res://assets/obj_pruebas/btn_der.png" id="1_cd5yw"]
+[ext_resource type="Texture2D" uid="uid://wkny62cpfr1r" path="res://assets/obj_pruebas/btn_izzq.png" id="2_3g57e"]
+[ext_resource type="Texture2D" uid="uid://cafmqxjgobn2b" path="res://assets/obj_pruebas/btn_arriba.png" id="3_amfv8"]
+[ext_resource type="Texture2D" uid="uid://gwl65a0imcs4" path="res://assets/obj_pruebas/btn_abajo.png" id="4_b3rl2"]
+[ext_resource type="Texture2D" uid="uid://dua71i4a0sd6b" path="res://assets/obj_pruebas/run.png" id="5_amfv8"]
+[ext_resource type="Texture2D" uid="uid://o4iva3v07uw3" path="res://assets/obj_pruebas/attack.png" id="6_b3rl2"]
 
 [node name="ui" type="Control" unique_id=803899648]
 layout_mode = 3
@@ -10,8 +15,38 @@ offset_bottom = 40.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2079616510]
 
-[node name="Virtual Joystick" parent="CanvasLayer" unique_id=964936729 instance=ExtResource("1_vi00g")]
-offset_left = -24.0
-offset_top = -274.0
-offset_right = 276.0
-offset_bottom = 26.0
+[node name="btn_der" type="TouchScreenButton" parent="CanvasLayer" unique_id=1814648278]
+position = Vector2(204, 529)
+scale = Vector2(0.3984375, 0.42578125)
+texture_normal = ExtResource("1_cd5yw")
+action = "derecha"
+
+[node name="btn_izq" type="TouchScreenButton" parent="CanvasLayer" unique_id=933388563]
+position = Vector2(1.9999999, 530.00006)
+scale = Vector2(0.39843747, 0.42578116)
+texture_normal = ExtResource("2_3g57e")
+action = "izquierda"
+
+[node name="btn_arriba" type="TouchScreenButton" parent="CanvasLayer" unique_id=381162775]
+position = Vector2(104, 428.99997)
+scale = Vector2(0.40234375, 0.41015613)
+texture_normal = ExtResource("3_amfv8")
+action = "arriba"
+
+[node name="btn_abajo" type="TouchScreenButton" parent="CanvasLayer" unique_id=779490989]
+position = Vector2(101.00001, 539)
+scale = Vector2(0.41015625, 0.38671872)
+texture_normal = ExtResource("4_b3rl2")
+action = "abajo"
+
+[node name="btn_run" type="TouchScreenButton" parent="CanvasLayer" unique_id=1757561562]
+position = Vector2(819.00006, 524)
+scale = Vector2(0.4648437, 0.4570312)
+texture_normal = ExtResource("5_amfv8")
+action = "correr"
+
+[node name="attack" type="TouchScreenButton" parent="CanvasLayer" unique_id=395184003]
+position = Vector2(988, 506)
+scale = Vector2(0.47265625, 0.48046875)
+texture_normal = ExtResource("6_b3rl2")
+action = "accion"
