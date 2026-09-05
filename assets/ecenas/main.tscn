@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wlwc86hhktjd" path="res://assets/ecenas/player.tscn" id="2_3a8g2"]
 [ext_resource type="PackedScene" uid="uid://dd5oaat4uphxy" path="res://assets/ecenas/character_body_2d.tscn" id="5_gyyxi"]
 [ext_resource type="PackedScene" uid="uid://ds4ghc8dga0lv" path="res://assets/ecenas/enemigo.tscn" id="5_prxuv"]
+[ext_resource type="PackedScene" uid="uid://lifjon86ih3o" path="res://assets/ecenas/ui.tscn" id="6_gyyxi"]
 
 [node name="main" type="Node2D" unique_id=364131574]
 
@@ -21,3 +22,5 @@ position = Vector2(410, 529)
 
 [node name="CharacterBody2D" parent="." unique_id=756622435 instance=ExtResource("5_gyyxi")]
 position = Vector2(326, 625)
+
+[node name="ui" parent="." unique_id=803899648 instance=ExtResource("6_gyyxi")]

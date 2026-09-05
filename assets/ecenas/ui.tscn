@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://lifjon86ih3o"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_vi00g"]
+
+[node name="ui" type="Control" unique_id=803899648]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2079616510]
+
+[node name="Virtual Joystick" parent="CanvasLayer" unique_id=964936729 instance=ExtResource("1_vi00g")]
+offset_left = -24.0
+offset_top = -274.0
+offset_right = 276.0
+offset_bottom = 26.0
