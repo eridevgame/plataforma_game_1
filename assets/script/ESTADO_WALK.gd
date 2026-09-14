@@ -15,7 +15,7 @@ var walk_speed: float:
 @export var estado_hurt: ESTADOS
 
 func on_enter():
-	player.play_anim("walk",1.0)
+	player.play_anim("walk",1.5)
 	player.get_node("colicion_normal").disabled = false
 	player.get_node("colicion_crouch").disabled = true
 	print("entra ", self.name)

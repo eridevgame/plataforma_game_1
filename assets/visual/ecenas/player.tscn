@@ -1514,7 +1514,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 10.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1593,7 +1593,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_52r60")
 }],
-"loop": false,
+"loop": true,
 "name": &"katana_attack_sheathe",
 "speed": 10.0
 }, {
@@ -2401,6 +2401,7 @@ position = Vector2(1, 1)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ujoy2")
 animation = &"idle"
+frame_progress = 0.5020807
 speed_scale = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=850689135]

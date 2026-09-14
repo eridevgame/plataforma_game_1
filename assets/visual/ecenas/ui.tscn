@@ -40,13 +40,13 @@ texture_normal = ExtResource("4_b3rl2")
 action = "abajo"
 
 [node name="btn_run" type="TouchScreenButton" parent="CanvasLayer" unique_id=1757561562]
-position = Vector2(819.00006, 524)
+position = Vector2(899.00006, 515.00006)
 scale = Vector2(0.4648437, 0.4570312)
 texture_normal = ExtResource("5_amfv8")
 action = "correr"
 
 [node name="attack" type="TouchScreenButton" parent="CanvasLayer" unique_id=395184003]
-position = Vector2(988, 506)
+position = Vector2(1024, 505.00003)
 scale = Vector2(0.47265625, 0.48046875)
 texture_normal = ExtResource("6_b3rl2")
 action = "accion"

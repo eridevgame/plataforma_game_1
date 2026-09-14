@@ -13,7 +13,7 @@ class_name  ESTADO_IDLE
 var salto = 1
 
 func on_enter():
-	player.play_anim("idle",1.0)
+	player.play_anim("idle",1.5)
 	player.config_colicion({
 		"parado": false,
 		"agachado":true,
