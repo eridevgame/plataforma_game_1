@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv40p2dw8e615"
-path="res://.godot/imported/player katana continuous attack 80x64.png-1528f20a47e876c57d4738b4ff3db549.ctex"
+path="res://.godot/imported/player katana continuous attack 80x64.png-8fc841533f9e1aa50fd766a7d6366bc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personaje/2D-Pixel-Art-Character-Template/Katana Continuous Attack/player katana continuous attack 80x64.png"
-dest_files=["res://.godot/imported/player katana continuous attack 80x64.png-1528f20a47e876c57d4738b4ff3db549.ctex"]
+source_file="res://assets/visual/personaje/2D-Pixel-Art-Character-Template/Katana Continuous Attack/player katana continuous attack 80x64.png"
+dest_files=["res://.godot/imported/player katana continuous attack 80x64.png-8fc841533f9e1aa50fd766a7d6366bc9.ctex"]
 
 [params]
 

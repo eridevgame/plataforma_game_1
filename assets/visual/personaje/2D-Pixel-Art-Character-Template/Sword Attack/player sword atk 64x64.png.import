@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fnrfxppongr3"
-path="res://.godot/imported/player sword atk 64x64.png-1fd3811e0645e3d9c328da410590aeeb.ctex"
+path="res://.godot/imported/player sword atk 64x64.png-11bec937b39ba3fb46deff8657f0df8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personaje/2D-Pixel-Art-Character-Template/Sword Attack/player sword atk 64x64.png"
-dest_files=["res://.godot/imported/player sword atk 64x64.png-1fd3811e0645e3d9c328da410590aeeb.ctex"]
+source_file="res://assets/visual/personaje/2D-Pixel-Art-Character-Template/Sword Attack/player sword atk 64x64.png"
+dest_files=["res://.godot/imported/player sword atk 64x64.png-11bec937b39ba3fb46deff8657f0df8a.ctex"]
 
 [params]
 

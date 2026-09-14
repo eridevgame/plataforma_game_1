@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b40a42qjo3l54"
-path="res://.godot/imported/ESCALAR.png-2da021c75dc0e68a6e5ff575d94ad2f0.ctex"
+path="res://.godot/imported/ESCALAR.png-1e2e0861fda836824be51502ce1fd237.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/obj_pruebas/ESCALAR.png"
-dest_files=["res://.godot/imported/ESCALAR.png-2da021c75dc0e68a6e5ff575d94ad2f0.ctex"]
+source_file="res://assets/visual/obj_pruebas/ESCALAR.png"
+dest_files=["res://.godot/imported/ESCALAR.png-1e2e0861fda836824be51502ce1fd237.ctex"]
 
 [params]
 

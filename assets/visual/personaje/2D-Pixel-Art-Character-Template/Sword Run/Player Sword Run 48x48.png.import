@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bciie6ifkbum4"
-path="res://.godot/imported/Player Sword Run 48x48.png-49f8fcca7b0859bf0b764dd86a5105d8.ctex"
+path="res://.godot/imported/Player Sword Run 48x48.png-1fb25461264ad855b87396c7ae027cae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personaje/2D-Pixel-Art-Character-Template/Sword Run/Player Sword Run 48x48.png"
-dest_files=["res://.godot/imported/Player Sword Run 48x48.png-49f8fcca7b0859bf0b764dd86a5105d8.ctex"]
+source_file="res://assets/visual/personaje/2D-Pixel-Art-Character-Template/Sword Run/Player Sword Run 48x48.png"
+dest_files=["res://.godot/imported/Player Sword Run 48x48.png-1fb25461264ad855b87396c7ae027cae.ctex"]
 
 [params]
 

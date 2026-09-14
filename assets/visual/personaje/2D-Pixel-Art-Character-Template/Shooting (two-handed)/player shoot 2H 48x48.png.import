@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn8yxtlymnubp"
-path="res://.godot/imported/player shoot 2H 48x48.png-0854f1fbe492e45923768362b1521ab2.ctex"
+path="res://.godot/imported/player shoot 2H 48x48.png-2a64189680b87d380cb9050e51db3ee2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personaje/2D-Pixel-Art-Character-Template/Shooting (two-handed)/player shoot 2H 48x48.png"
-dest_files=["res://.godot/imported/player shoot 2H 48x48.png-0854f1fbe492e45923768362b1521ab2.ctex"]
+source_file="res://assets/visual/personaje/2D-Pixel-Art-Character-Template/Shooting (two-handed)/player shoot 2H 48x48.png"
+dest_files=["res://.godot/imported/player shoot 2H 48x48.png-2a64189680b87d380cb9050e51db3ee2.ctex"]
 
 [params]
 

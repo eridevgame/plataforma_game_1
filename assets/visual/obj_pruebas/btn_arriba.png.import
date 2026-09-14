@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cafmqxjgobn2b"
-path="res://.godot/imported/btn_arriba.png-3e066608805620e8c873501465e0e599.ctex"
+path="res://.godot/imported/btn_arriba.png-07af809479a4c8f53ab679e9b2ed43ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/obj_pruebas/btn_arriba.png"
-dest_files=["res://.godot/imported/btn_arriba.png-3e066608805620e8c873501465e0e599.ctex"]
+source_file="res://assets/visual/obj_pruebas/btn_arriba.png"
+dest_files=["res://.godot/imported/btn_arriba.png-07af809479a4c8f53ab679e9b2ed43ce.ctex"]
 
 [params]
 

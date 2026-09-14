@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnvdhmv3q6bgx"
-path="res://.godot/imported/160x160 background tilemap.png-f0efbcbdf5d360c16d786e1b5f16a968.ctex"
+path="res://.godot/imported/160x160 background tilemap.png-a382fda2f3ca6536c3a056205cc83592.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personaje/2D-Pixel-Art-Character-Template/Tilemap (Super Basic)/160x160 background tilemap.png"
-dest_files=["res://.godot/imported/160x160 background tilemap.png-f0efbcbdf5d360c16d786e1b5f16a968.ctex"]
+source_file="res://assets/visual/personaje/2D-Pixel-Art-Character-Template/Tilemap (Super Basic)/160x160 background tilemap.png"
+dest_files=["res://.godot/imported/160x160 background tilemap.png-a382fda2f3ca6536c3a056205cc83592.ctex"]
 
 [params]
 

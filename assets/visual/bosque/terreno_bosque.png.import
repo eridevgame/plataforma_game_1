@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fjngw7id8jbe"
-path="res://.godot/imported/terreno_bosque.png-f77c2aa45f10503796a16ff8a84664e3.ctex"
+path="res://.godot/imported/terreno_bosque.png-5dd7a6ca513c150ed68790511421f95b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bosque/terreno_bosque.png"
-dest_files=["res://.godot/imported/terreno_bosque.png-f77c2aa45f10503796a16ff8a84664e3.ctex"]
+source_file="res://assets/visual/bosque/terreno_bosque.png"
+dest_files=["res://.godot/imported/terreno_bosque.png-5dd7a6ca513c150ed68790511421f95b.ctex"]
 
 [params]
 

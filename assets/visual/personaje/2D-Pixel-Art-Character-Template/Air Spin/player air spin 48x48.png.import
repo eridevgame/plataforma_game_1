@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfwy830ryetcc"
-path="res://.godot/imported/player air spin 48x48.png-06da29f6e183bcb45c52ab6e7e42ce85.ctex"
+path="res://.godot/imported/player air spin 48x48.png-73eaf641911116ee18e9fa764b5ce0d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personaje/2D-Pixel-Art-Character-Template/Air Spin/player air spin 48x48.png"
-dest_files=["res://.godot/imported/player air spin 48x48.png-06da29f6e183bcb45c52ab6e7e42ce85.ctex"]
+source_file="res://assets/visual/personaje/2D-Pixel-Art-Character-Template/Air Spin/player air spin 48x48.png"
+dest_files=["res://.godot/imported/player air spin 48x48.png-73eaf641911116ee18e9fa764b5ce0d8.ctex"]
 
 [params]
 
